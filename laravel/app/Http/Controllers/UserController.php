@@ -8,9 +8,11 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function users(){
+    public function users()
+    {
         $users = User::all();
-
-        return view('usuarios',['users' => $users]);
+        return view('usuarios',[
+            'users' => $users
+        ]);
     }
 }
